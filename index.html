@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calabria Bus — orari &amp; percorsi</title>
+<title>Calabria Bus — schedules &amp; routes</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
@@ -136,10 +136,10 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 40px;color:var(--faint);font
 <body>
 <header class="top">
   <div class="top-inner">
-    <div class="brand"><span class="mk">CB</span><span>Calabria Bus<small>Consorzio Autolinee TPL · orari</small></span></div>
+    <div class="brand"><span class="mk">CB</span><span>Calabria Bus<small>Consorzio Autolinee TPL · schedules</small></span></div>
     <nav class="tabs" role="tablist">
-      <button role="tab" aria-selected="true" data-tab="search">Cerca</button>
-      <button role="tab" aria-selected="false" data-tab="lines">Linee</button>
+      <button role="tab" aria-selected="true" data-tab="search">Search</button>
+      <button role="tab" aria-selected="false" data-tab="lines">Lines</button>
     </nav>
   </div>
 </header>
@@ -147,28 +147,28 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 40px;color:var(--faint);font
 <main>
   <!-- SEARCH -->
   <section id="search" class="view active" role="tabpanel">
-    <h1>Trova il tuo autobus</h1>
-    <p class="lede">Scegli partenza e destinazione: le corse mostrate sono solo quelle valide per la data scelta.</p>
+    <h1>Find your bus</h1>
+    <p class="lede">Choose an origin and destination — only the trips valid for the chosen date are shown.</p>
     <div class="card pad">
       <div class="form">
         <div class="field wide">
-          <label class="lbl" for="orig">Partenza</label>
+          <label class="lbl" for="orig">From</label>
           <select id="orig"></select>
         </div>
-        <div class="swap"><button id="swap" type="button">&#8645; Inverti</button></div>
+        <div class="swap"><button id="swap" type="button">&#8645; Swap</button></div>
         <div class="field wide">
-          <label class="lbl" for="dest">Destinazione</label>
+          <label class="lbl" for="dest">To</label>
           <select id="dest"></select>
         </div>
         <div class="field">
-          <label class="lbl" for="date">Data</label>
+          <label class="lbl" for="date">Date</label>
           <input type="date" id="date">
         </div>
         <div class="field">
-          <label class="lbl" for="time">Dopo le</label>
+          <label class="lbl" for="time">After</label>
           <input type="time" id="time">
         </div>
-        <div class="field wide"><button class="btn" id="go" type="button">Cerca corse</button></div>
+        <div class="field wide"><button class="btn" id="go" type="button">Find buses</button></div>
       </div>
       <div id="daybox"></div>
     </div>
@@ -178,14 +178,14 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 40px;color:var(--faint);font
   <!-- LINES -->
   <section id="lines" class="view" role="tabpanel">
     <div id="linelistview">
-      <h1>Linee</h1>
-      <p class="lede">Seleziona una linea per vederne l&rsquo;orario completo e il percorso sulla mappa.</p>
+      <h1>Lines</h1>
+      <p class="lede">Select a line to see its full timetable and its route on the map.</p>
       <div id="linelist" class="linelist"></div>
     </div>
     <div id="linedetail" style="display:none"></div>
   </section>
 </main>
-<footer>Dati orari da Consorzio Autolinee TPL. Le corse a richiesta (R) fermano solo su prenotazione. App dimostrativa &mdash; verificare sempre gli orari ufficiali.</footer>
+<footer>Schedule data from Consorzio Autolinee TPL. Request stops (R) are served by booking only. Demo app &mdash; always check the official timetables.</footer>
 
 <script>
 
@@ -197,13 +197,13 @@ function easterSunday(y){const a=y%19,b=(y/100|0),c=y%100,d=(b/4|0),e=b%4,f=((b+
  g=((b-f+1)/3|0),h=(19*a+b-d-g+15)%30,i=(c/4|0),k=c%4,l=(32+2*e+2*i-h-k)%7,m=((a+11*h+22*l)/451|0),
  mo=((h+l-7*m+114)/31|0),da=((h+l-7*m+114)%31)+1;return new Date(y,mo-1,da);}
 const md=dt=>String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');
-const FIXED={'01-01':'Capodanno','01-06':'Epifania','04-25':'Liberazione','05-01':'Festa del Lavoro',
- '06-02':'Festa della Repubblica','08-15':'Ferragosto','11-01':'Ognissanti','12-08':'Immacolata',
- '12-25':'Natale','12-26':'Santo Stefano'};
+const FIXED={'01-01':'New Year\u2019s Day','01-06':'Epiphany','04-25':'Liberation Day','05-01':'Labour Day',
+ '06-02':'Republic Day','08-15':'Assumption Day','11-01':'All Saints\u2019 Day','12-08':'Immaculate Conception',
+ '12-25':'Christmas','12-26':'St Stephen\u2019s Day'};
 function holidayName(date){
   const k=md(date); if(FIXED[k])return FIXED[k];
   const e=easterSunday(date.getFullYear()),p=new Date(e);p.setDate(e.getDate()+1);
-  if(md(date)===md(e))return 'Pasqua'; if(md(date)===md(p))return 'Luned\u00EC dell\u2019Angelo';
+  if(md(date)===md(e))return 'Easter'; if(md(date)===md(p))return 'Easter Monday';
   return null;
 }
 const isHoliday=d=>holidayName(d)!==null;
@@ -227,10 +227,10 @@ const WIN={
 function periodMatch(t,d,cal){const f=WIN[t.periodo];return f?f(d,cal):true;}
 function isValid(t,d){return dayMatch(t,d)&&periodMatch(t,d,DATA.calendar);}
 function cadenzaLabel(c){
-  const b=parseCadenza(c),days=['lun','mar','mer','gio','ven','sab','dom'];
+  const b=parseCadenza(c),days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
   const on=b.map((v,i)=>v?days[i]:null).filter(Boolean);
-  if(on.length===6&&!b[6])return 'lun\u2013sab'; if(on.length===7)return 'tutti i giorni';
-  if(on.length===1&&b[6])return 'dom e festivi'; return on.join(', ');
+  if(on.length===6&&!b[6])return 'Mon\u2013Sat'; if(on.length===7)return 'every day';
+  if(on.length===1&&b[6])return 'Sun & holidays'; return on.join(', ');
 }
 
 /* ---------- helpers ---------- */
@@ -239,11 +239,11 @@ function toMin(t){const[a,b]=t.split(':').map(Number);return a*60+b;}
 function fmtDur(m){const h=m/60|0,mm=m%60;return h?`${h}h ${String(mm).padStart(2,'0')}`:`${mm} min`;}
 function dayTypeLabel(d){
   const hn=holidayName(d);
-  const wd=['domenica','luned\u00EC','marted\u00EC','mercoled\u00EC','gioved\u00EC','venerd\u00EC','sabato'][d.getDay()];
-  if(hn)return{fest:true,txt:`<b>${wd.charAt(0).toUpperCase()+wd.slice(1)} ${d.getDate()}/${d.getMonth()+1}</b> &middot; festivo (${hn}). Vengono mostrate solo le corse festive (domenica/festivi).`};
-  if(d.getDay()===0)return{fest:true,txt:`<b>Domenica ${d.getDate()}/${d.getMonth()+1}</b> &middot; festivo. Vengono mostrate solo le corse della domenica.`};
+  const wd=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d.getDay()];
+  if(hn)return{fest:true,txt:`<b>${wd} ${d.getDate()}/${d.getMonth()+1}</b> &middot; holiday (${hn}). Showing holiday services only (Sunday/holiday trips).`};
+  if(d.getDay()===0)return{fest:true,txt:`<b>Sunday ${d.getDate()}/${d.getMonth()+1}</b> &middot; holiday. Showing Sunday services only.`};
   const term=inTerm(d,DATA.calendar);
-  return{fest:false,txt:`<b>${wd.charAt(0).toUpperCase()+wd.slice(1)} ${d.getDate()}/${d.getMonth()+1}</b> &middot; giorno feriale, periodo ${term?'scolastico':'non scolastico'}.`};
+  return{fest:false,txt:`<b>${wd} ${d.getDate()}/${d.getMonth()+1}</b> &middot; weekday, ${term?'school':'non-school'} period.`};
 }
 function parseLocalDate(v){const[y,m,d]=v.split('-').map(Number);return new Date(y,m-1,d);}
 
@@ -274,10 +274,10 @@ function doSearch(){
 }
 function renderResults(list,o,dst,mode){
   const box=$('#results');
-  if(mode==='same'){box.innerHTML=`<div class="card empty">Partenza e destinazione coincidono.</div>`;return;}
+  if(mode==='same'){box.innerHTML=`<div class="card empty">Origin and destination are the same.</div>`;return;}
   if(!list.length){
-    box.innerHTML=`<div class="card empty"><b>Nessuna corsa diretta</b> per la data e l\u2019orario scelti.<br>
-      Prova un altro orario o un\u2019altra data. I cambi tra linee non sono ancora supportati.</div>`;return;}
+    box.innerHTML=`<div class="card empty"><b>No direct trips</b> for the chosen date and time.<br>
+      Try a different time or date. Transfers between lines are not supported yet.</div>`;return;}
   box.innerHTML=list.map(x=>{
     const c=x.line.color;
     return `<div class="trip">
@@ -287,7 +287,7 @@ function renderResults(list,o,dst,mode){
         <span class="arrow">&rarr;</span>
         <div><div class="t tnum">${x.arr}</div><div class="place">${stopById[dst].name}</div></div>
       </div>
-      <div class="dur"><span class="big tnum">${fmtDur(x.dur)}</span>corsa ${x.t.corsaNo}</div>
+      <div class="dur"><span class="big tnum">${fmtDur(x.dur)}</span>trip ${x.t.corsaNo}</div>
     </div>`;}).join('');
 }
 
@@ -314,14 +314,14 @@ function renderLineDetail(){
   const d=$('#linedetail');
   d.innerHTML=`
     <div class="detailhead">
-      <button class="back" onclick="showLineList()">&lsaquo; Linee</button>
+      <button class="back" onclick="showLineList()">&lsaquo; Lines</button>
       <span class="linebadge" style="background:${curLine.color}">${curLine.number}</span>
       <strong style="font-size:15px">${curLine.name}</strong>
     </div>
     <div class="dirtoggle">${dirs.map(r=>
       `<button data-dir="${r.direction}" aria-selected="${r.direction===curDir}"
         onclick="curDir='${r.direction}';renderLineDetail()">
-        ${r.direction==='andata'?'Andata':'Ritorno'}</button>`).join('')}</div>
+        ${r.direction==='andata'?'Outbound':'Return'}</button>`).join('')}</div>
     <div class="mapwrap"><div id="map"></div><div id="mapmsg" class="mapmsg"></div></div>
     ${renderTimetable()}`;
   drawMap();
@@ -341,15 +341,15 @@ function renderTimetable(){
   }).join('');
   return `
     <div class="legend">
-      <span><span class="rbadge">R</span> fermata a richiesta</span>
-      <span><span style="color:#CBD5E1">&middot;</span> la corsa non ferma qui</span>
-      <span>Periodo/cadenza = validit\u00E0 della singola corsa</span>
+      <span><span class="rbadge">R</span> request stop</span>
+      <span><span style="color:#CBD5E1">&middot;</span> trip does not stop here</span>
+      <span>Period/cadence = validity of each trip</span>
     </div>
     <div class="ttscroll"><table class="tt">
       <thead>
-        <tr><th class="stopname">Fermata</th>${head}</tr>
-        <tr class="meta"><td class="stopname">Periodo</td>${per}</tr>
-        <tr class="meta"><td class="stopname">Cadenza</td>${cad}</tr>
+        <tr><th class="stopname">Stop</th>${head}</tr>
+        <tr class="meta"><td class="stopname">Period</td>${per}</tr>
+        <tr class="meta"><td class="stopname">Cadence</td>${cad}</tr>
       </thead>
       <tbody>${body}</tbody>
     </table></div>`;
@@ -361,7 +361,7 @@ function drawMap(){
   if(mapObj){mapObj.remove();mapObj=null;}
   if(!pts.length){
     msg.style.display='grid';
-    msg.innerHTML=`<div><b>Mappa in attesa di coordinate</b><br>Aggiungi lat/lng alle fermate di questa linea e il percorso comparir\u00E0 qui.</div>`;
+    msg.innerHTML=`<div><b>Map waiting for coordinates</b><br>Add lat/lng to this line\u2019s stops and the route will appear here.</div>`;
     mapEl.style.display='none';return;
   }
   msg.style.display='none';mapEl.style.display='';
@@ -373,7 +373,7 @@ function drawMap(){
   pts.forEach((s,i)=>{
     L.circleMarker([s.lat,s.lng],{radius:i===0||i===pts.length-1?7:5,
       color:curLine.color,fillColor:'#fff',fillOpacity:1,weight:3})
-      .addTo(mapObj).bindPopup(`<b>${s.name}</b>${s.request?'<br><i>a richiesta</i>':''}`);
+      .addTo(mapObj).bindPopup(`<b>${s.name}</b>${s.request?'<br><i>on request</i>':''}`);
   });
   mapObj.fitBounds(latlngs,{padding:[24,24]});
 }
@@ -395,9 +395,9 @@ async function boot(){
     DATA=await res.json();
   }catch(e){
     document.querySelector('main').innerHTML=
-      `<div class="card empty"><b>Impossibile caricare data.json.</b><br>
-       Se apri il file dal disco (file://), il browser blocca fetch: pubblica su GitHub Pages
-       o avvia un server locale (<code>python3 -m http.server</code>). Dettaglio: ${e.message}</div>`;
+      `<div class="card empty"><b>Couldn\u2019t load data.json.</b><br>
+       If you opened the file from disk (file://), the browser blocks fetch: publish on GitHub Pages
+       or run a local server (<code>python3 -m http.server</code>). Details: ${e.message}</div>`;
     return;
   }
   DATA.stops.forEach(s=>stopById[s.id]=s);
