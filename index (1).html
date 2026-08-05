@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calabria Bus — orari &amp; percorsi</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+:root{
+  --bg:#F8FAFC; --ink:#1E293B; --muted:#64748B; --faint:#94A3B8;
+  --line:#E2E8F0; --surface:#FFFFFF; --accent:#2563EB; --accent-weak:#EFF4FF;
+  --ok:#047857; --warn:#B45309; --warn-weak:#FEF3C7;
+  --radius:10px; --shadow:0 1px 2px rgba(15,23,42,.04),0 1px 3px rgba(15,23,42,.06);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
+  font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.tnum{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+a{color:var(--accent)}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+header.top{position:sticky;top:0;z-index:600;background:rgba(248,250,252,.85);
+  backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.top-inner{max-width:960px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em}
+.brand .mk{width:26px;height:26px;border-radius:7px;background:var(--ink);color:#fff;
+  display:grid;place-items:center;font-size:13px;font-weight:800}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:11px;letter-spacing:.02em}
+nav.tabs{margin-left:auto;display:flex;gap:2px;background:#EEF2F7;padding:3px;border-radius:9px}
+nav.tabs button{border:0;background:transparent;color:var(--muted);font-weight:600;font-size:13px;
+  padding:7px 14px;border-radius:7px;cursor:pointer}
+nav.tabs button[aria-selected=true]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+
+main{max-width:960px;margin:0 auto;padding:20px 16px 64px}
+.view{display:none}.view.active{display:block}
+
+h1{font-size:22px;letter-spacing:-.02em;margin:.2em 0 .1em}
+.lede{color:var(--muted);margin:0 0 20px;font-size:14px}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.pad{padding:16px}
+
+/* search form */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.wide{grid-column:1/-1}
+label.lbl{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.02em;text-transform:uppercase}
+select,input[type=date],input[type=time]{width:100%;padding:10px 11px;border:1px solid var(--line);
+  border-radius:8px;background:var(--surface);color:var(--ink);font-size:15px;font-family:inherit}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 10px center;padding-right:34px}
+.swap{grid-column:1/-1;display:flex;justify-content:center;margin:-4px 0}
+.swap button{border:1px solid var(--line);background:var(--surface);border-radius:20px;
+  padding:5px 12px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;
+  background:var(--ink);color:#fff;font-weight:600;font-size:15px;padding:11px 18px;border-radius:9px;width:100%}
+.btn:hover{background:#0f172a}
+
+/* day-context banner */
+.daybox{margin-top:14px;display:flex;gap:10px;align-items:flex-start;font-size:13px;
+  padding:11px 13px;border-radius:9px;background:var(--accent-weak);color:#1e3a8a}
+.daybox.fest{background:var(--warn-weak);color:#7c4a03}
+.daybox b{font-weight:700}
+
+/* results */
+.results{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.trip{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;
+  padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
+.linebadge{font-weight:800;font-size:13px;color:#fff;padding:4px 9px;border-radius:7px;letter-spacing:.01em}
+.leg{display:flex;align-items:center;gap:10px}
+.leg .t{font-size:20px;font-weight:700;letter-spacing:-.01em}
+.leg .arrow{flex:0 0 auto;color:var(--faint)}
+.leg .place{font-size:12.5px;color:var(--muted);max-width:34ch}
+.dur{text-align:right;color:var(--muted);font-size:12.5px;white-space:nowrap}
+.dur .big{display:block;color:var(--ink);font-weight:700;font-size:15px}
+
+.empty{padding:26px 18px;text-align:center;color:var(--muted);font-size:14px}
+.empty b{color:var(--ink)}
+
+/* lines */
+.linelist{display:grid;gap:10px}
+.linecard{display:flex;align-items:center;gap:14px;padding:14px 16px;cursor:pointer;
+  border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);text-align:left;width:100%}
+.linecard:hover{border-color:#CBD5E1}
+.linecard .num{font-weight:800;color:#fff;font-size:15px;padding:6px 11px;border-radius:8px;flex:0 0 auto}
+.linecard .nm{font-weight:600;font-size:14.5px}
+.linecard .go{margin-left:auto;color:var(--faint)}
+
+.detailhead{display:flex;align-items:center;gap:12px;margin:4px 0 16px}
+.back{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 12px;
+  font-weight:600;font-size:13px;color:var(--muted);cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.dirtoggle{display:inline-flex;background:#EEF2F7;border-radius:9px;padding:3px;gap:2px;margin-bottom:14px}
+.dirtoggle button{border:0;background:transparent;color:var(--muted);font-weight:600;font-size:13px;
+  padding:7px 16px;border-radius:7px;cursor:pointer}
+.dirtoggle button[aria-selected=true]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+
+#map{height:300px;border-radius:var(--radius);border:1px solid var(--line);overflow:hidden;z-index:1}
+.mapwrap{position:relative}
+.mapmsg{position:absolute;inset:0;display:grid;place-items:center;text-align:center;
+  background:repeating-linear-gradient(45deg,#F1F5F9,#F1F5F9 12px,#F8FAFC 12px,#F8FAFC 24px);
+  border-radius:var(--radius);color:var(--muted);font-size:13px;padding:20px;z-index:2}
+.mapmsg b{color:var(--ink)}
+
+/* timetable */
+.legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--muted);font-size:12px;margin:14px 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.rbadge{display:inline-grid;place-items:center;width:15px;height:15px;border-radius:4px;
+  background:var(--warn-weak);color:var(--warn);font-size:9px;font-weight:800}
+.ttscroll{overflow:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table.tt{border-collapse:separate;border-spacing:0;font-size:12.5px;min-width:100%}
+table.tt th,table.tt td{padding:6px 9px;border-bottom:1px solid #EEF2F7;white-space:nowrap;text-align:center}
+table.tt thead th{position:sticky;top:0;background:#F8FAFC;z-index:3;font-weight:700;color:var(--muted);font-size:11px}
+table.tt .meta td{background:#FBFDFF;color:var(--faint);font-size:10.5px;font-weight:600}
+table.tt .stopname{position:sticky;left:0;background:var(--surface);z-index:2;text-align:left;
+  font-weight:500;min-width:210px;max-width:260px;white-space:normal;line-height:1.25}
+table.tt thead .stopname,table.tt .meta .stopname{z-index:4;background:#F8FAFC}
+table.tt td.time{font-variant-numeric:tabular-nums;color:var(--ink)}
+table.tt td.skip{color:#CBD5E1}
+tr.hl td{background:var(--accent-weak)!important}
+
+footer{max-width:960px;margin:0 auto;padding:0 16px 40px;color:var(--faint);font-size:12px}
+@media(max-width:640px){
+  .form{grid-template-columns:1fr}
+  .trip{grid-template-columns:auto 1fr;row-gap:6px}
+  .dur{grid-column:2;text-align:left}
+  nav.tabs button{padding:7px 10px}
+  .brand small{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand"><span class="mk">CB</span><span>Calabria Bus<small>Consorzio Autolinee TPL · orari</small></span></div>
+    <nav class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="search">Cerca</button>
+      <button role="tab" aria-selected="false" data-tab="lines">Linee</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- SEARCH -->
+  <section id="search" class="view active" role="tabpanel">
+    <h1>Trova il tuo autobus</h1>
+    <p class="lede">Scegli partenza e destinazione: le corse mostrate sono solo quelle valide per la data scelta.</p>
+    <div class="card pad">
+      <div class="form">
+        <div class="field wide">
+          <label class="lbl" for="orig">Partenza</label>
+          <select id="orig"></select>
+        </div>
+        <div class="swap"><button id="swap" type="button">&#8645; Inverti</button></div>
+        <div class="field wide">
+          <label class="lbl" for="dest">Destinazione</label>
+          <select id="dest"></select>
+        </div>
+        <div class="field">
+          <label class="lbl" for="date">Data</label>
+          <input type="date" id="date">
+        </div>
+        <div class="field">
+          <label class="lbl" for="time">Dopo le</label>
+          <input type="time" id="time">
+        </div>
+        <div class="field wide"><button class="btn" id="go" type="button">Cerca corse</button></div>
+      </div>
+      <div id="daybox"></div>
+    </div>
+    <div id="results" class="results"></div>
+  </section>
+
+  <!-- LINES -->
+  <section id="lines" class="view" role="tabpanel">
+    <div id="linelistview">
+      <h1>Linee</h1>
+      <p class="lede">Seleziona una linea per vederne l&rsquo;orario completo e il percorso sulla mappa.</p>
+      <div id="linelist" class="linelist"></div>
+    </div>
+    <div id="linedetail" style="display:none"></div>
+  </section>
+</main>
+<footer>Dati orari da Consorzio Autolinee TPL. Le corse a richiesta (R) fermano solo su prenotazione. App dimostrativa &mdash; verificare sempre gli orari ufficiali.</footer>
+
+<script>
+
+/* ================= data loading (split: fetch data.json) ================= */
+let DATA=null, stopById={}, routeById={}, lineById={}, tripsByRoute={}, stopsSorted=[];
+
+/* ---------- periodicity logic (two axes) ---------- */
+function easterSunday(y){const a=y%19,b=(y/100|0),c=y%100,d=(b/4|0),e=b%4,f=((b+8)/25|0),
+ g=((b-f+1)/3|0),h=(19*a+b-d-g+15)%30,i=(c/4|0),k=c%4,l=(32+2*e+2*i-h-k)%7,m=((a+11*h+22*l)/451|0),
+ mo=((h+l-7*m+114)/31|0),da=((h+l-7*m+114)%31)+1;return new Date(y,mo-1,da);}
+const md=dt=>String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');
+const FIXED={'01-01':'Capodanno','01-06':'Epifania','04-25':'Liberazione','05-01':'Festa del Lavoro',
+ '06-02':'Festa della Repubblica','08-15':'Ferragosto','11-01':'Ognissanti','12-08':'Immacolata',
+ '12-25':'Natale','12-26':'Santo Stefano'};
+function holidayName(date){
+  const k=md(date); if(FIXED[k])return FIXED[k];
+  const e=easterSunday(date.getFullYear()),p=new Date(e);p.setDate(e.getDate()+1);
+  if(md(date)===md(e))return 'Pasqua'; if(md(date)===md(p))return 'Luned\u00EC dell\u2019Angelo';
+  return null;
+}
+const isHoliday=d=>holidayName(d)!==null;
+function parseCadenza(c){c=(c||'').padEnd(7,'_').slice(0,7);return[...c].map(ch=>ch!=='_');}
+function effIdx(d){if(isHoliday(d))return 6;const j=d.getDay();return j===0?6:j-1;}
+function dayMatch(t,d){return parseCadenza(t.cadenza)[effIdx(d)];}
+const ordv=d=>(d.getMonth()+1)*100+d.getDate();
+function inMD(d,s,e){const o=ordv(d);return s<=e?(o>=s&&o<=e):(o>=s||o<=e);}
+const isAug=d=>d.getMonth()===7;
+function inBreak(d,cal){return(cal.schoolBreaks||[]).some(([s,e])=>inMD(d,s,e));}
+function inTerm(d,cal){if(inBreak(d,cal))return false;return(cal.schoolTerm||[]).some(([s,e])=>inMD(d,s,e));}
+const WIN={
+ 'Fer':()=>true,'Fer*':d=>!isAug(d),
+ 'Est':d=>inMD(d,801,909),'Est*':d=>inMD(d,801,831),
+ 'Fest':()=>true,'Fest*':d=>!isAug(d),
+ 'Non Scol':(d,c)=>inBreak(d,c),'Non Scol*':(d,c)=>inBreak(d,c)&&!isAug(d),
+ 'Scol':(d,c)=>inTerm(d,c),
+ 'Univ':d=>inMD(d,101,731)||inMD(d,910,1231),
+ 'Univ*':d=>inMD(d,101,630)||inMD(d,910,1231)
+};
+function periodMatch(t,d,cal){const f=WIN[t.periodo];return f?f(d,cal):true;}
+function isValid(t,d){return dayMatch(t,d)&&periodMatch(t,d,DATA.calendar);}
+function cadenzaLabel(c){
+  const b=parseCadenza(c),days=['lun','mar','mer','gio','ven','sab','dom'];
+  const on=b.map((v,i)=>v?days[i]:null).filter(Boolean);
+  if(on.length===6&&!b[6])return 'lun\u2013sab'; if(on.length===7)return 'tutti i giorni';
+  if(on.length===1&&b[6])return 'dom e festivi'; return on.join(', ');
+}
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s);
+function toMin(t){const[a,b]=t.split(':').map(Number);return a*60+b;}
+function fmtDur(m){const h=m/60|0,mm=m%60;return h?`${h}h ${String(mm).padStart(2,'0')}`:`${mm} min`;}
+function dayTypeLabel(d){
+  const hn=holidayName(d);
+  const wd=['domenica','luned\u00EC','marted\u00EC','mercoled\u00EC','gioved\u00EC','venerd\u00EC','sabato'][d.getDay()];
+  if(hn)return{fest:true,txt:`<b>${wd.charAt(0).toUpperCase()+wd.slice(1)} ${d.getDate()}/${d.getMonth()+1}</b> &middot; festivo (${hn}). Vengono mostrate solo le corse festive (domenica/festivi).`};
+  if(d.getDay()===0)return{fest:true,txt:`<b>Domenica ${d.getDate()}/${d.getMonth()+1}</b> &middot; festivo. Vengono mostrate solo le corse della domenica.`};
+  const term=inTerm(d,DATA.calendar);
+  return{fest:false,txt:`<b>${wd.charAt(0).toUpperCase()+wd.slice(1)} ${d.getDate()}/${d.getMonth()+1}</b> &middot; giorno feriale, periodo ${term?'scolastico':'non scolastico'}.`};
+}
+function parseLocalDate(v){const[y,m,d]=v.split('-').map(Number);return new Date(y,m-1,d);}
+
+/* ---------- search ---------- */
+function fillStops(sel){sel.innerHTML=stopsSorted.map(s=>
+  `<option value="${s.id}">${s.name}${s.request?'  (R)':''}</option>`).join('');}
+function doSearch(){
+  const o=$('#orig').value,dst=$('#dest').value,dstr=$('#date').value,tstr=$('#time').value||'00:00';
+  if(!dstr)return;
+  const date=parseLocalDate(dstr);
+  const dl=dayTypeLabel(date);
+  $('#daybox').className='daybox'+(dl.fest?' fest':'');$('#daybox').innerHTML=dl.txt;
+  if(o===dst){renderResults([],o,dst,'same');return;}
+  const found=[];
+  DATA.routes.forEach(r=>{
+    const io=r.stopIds.indexOf(o),id=r.stopIds.indexOf(dst);
+    if(io<0||id<0||io>=id)return;
+    (tripsByRoute[r.id]||[]).forEach(t=>{
+      if(!isValid(t,date))return;
+      const dep=t.times[o],arr=t.times[dst];
+      if(!dep||!arr)return;
+      if(toMin(dep)<toMin(tstr))return;
+      found.push({t,r,line:lineById[r.lineId],dep,arr,dur:toMin(arr)-toMin(dep)});
+    });
+  });
+  found.sort((a,b)=>toMin(a.dep)-toMin(b.dep));
+  renderResults(found,o,dst,'ok',date);
+}
+function renderResults(list,o,dst,mode){
+  const box=$('#results');
+  if(mode==='same'){box.innerHTML=`<div class="card empty">Partenza e destinazione coincidono.</div>`;return;}
+  if(!list.length){
+    box.innerHTML=`<div class="card empty"><b>Nessuna corsa diretta</b> per la data e l\u2019orario scelti.<br>
+      Prova un altro orario o un\u2019altra data. I cambi tra linee non sono ancora supportati.</div>`;return;}
+  box.innerHTML=list.map(x=>{
+    const c=x.line.color;
+    return `<div class="trip">
+      <span class="linebadge" style="background:${c}">${x.line.number}</span>
+      <div class="leg">
+        <div><div class="t tnum">${x.dep}</div><div class="place">${stopById[o].name}</div></div>
+        <span class="arrow">&rarr;</span>
+        <div><div class="t tnum">${x.arr}</div><div class="place">${stopById[dst].name}</div></div>
+      </div>
+      <div class="dur"><span class="big tnum">${fmtDur(x.dur)}</span>corsa ${x.t.corsaNo}</div>
+    </div>`;}).join('');
+}
+
+/* ---------- lines ---------- */
+let curLine,curDir,mapObj;
+function showLineList(){
+  $('#linelistview').style.display='';$('#linedetail').style.display='none';
+  $('#linelist').innerHTML=DATA.lines.map(l=>
+    `<button class="linecard" onclick="openLine('${l.id}')">
+       <span class="num" style="background:${l.color}">${l.number}</span>
+       <span class="nm">${l.name}</span><span class="go">&rsaquo;</span>
+     </button>`).join('');
+}
+function openLine(id){
+  curLine=lineById[id];
+  const dirs=DATA.routes.filter(r=>r.lineId===id).map(r=>r.direction);
+  curDir=dirs[0];
+  $('#linelistview').style.display='none';$('#linedetail').style.display='';
+  renderLineDetail();
+}
+window.openLine=openLine;window.showLineList=showLineList;
+function renderLineDetail(){
+  const dirs=DATA.routes.filter(x=>x.lineId===curLine.id);
+  const d=$('#linedetail');
+  d.innerHTML=`
+    <div class="detailhead">
+      <button class="back" onclick="showLineList()">&lsaquo; Linee</button>
+      <span class="linebadge" style="background:${curLine.color}">${curLine.number}</span>
+      <strong style="font-size:15px">${curLine.name}</strong>
+    </div>
+    <div class="dirtoggle">${dirs.map(r=>
+      `<button data-dir="${r.direction}" aria-selected="${r.direction===curDir}"
+        onclick="curDir='${r.direction}';renderLineDetail()">
+        ${r.direction==='andata'?'Andata':'Ritorno'}</button>`).join('')}</div>
+    <div class="mapwrap"><div id="map"></div><div id="mapmsg" class="mapmsg"></div></div>
+    ${renderTimetable()}`;
+  drawMap();
+}
+window.renderLineDetail=renderLineDetail;
+function renderTimetable(){
+  const r=DATA.routes.find(x=>x.lineId===curLine.id&&x.direction===curDir);
+  const trips=tripsByRoute[r.id]||[];
+  const head=trips.map(t=>`<th>${t.corsaNo}</th>`).join('');
+  const per =trips.map(t=>`<th>${t.periodo}</th>`).join('');
+  const cad =trips.map(t=>`<th>${cadenzaLabel(t.cadenza)}</th>`).join('');
+  const body=r.stopIds.map(sid=>{
+    const s=stopById[sid];
+    const cells=trips.map(t=>{const v=t.times[sid];
+      return v?`<td class="time tnum">${v}</td>`:`<td class="skip">&middot;</td>`;}).join('');
+    return `<tr><td class="stopname">${s.request?'<span class="rbadge">R</span> ':''}${s.name}</td>${cells}</tr>`;
+  }).join('');
+  return `
+    <div class="legend">
+      <span><span class="rbadge">R</span> fermata a richiesta</span>
+      <span><span style="color:#CBD5E1">&middot;</span> la corsa non ferma qui</span>
+      <span>Periodo/cadenza = validit\u00E0 della singola corsa</span>
+    </div>
+    <div class="ttscroll"><table class="tt">
+      <thead>
+        <tr><th class="stopname">Fermata</th>${head}</tr>
+        <tr class="meta"><td class="stopname">Periodo</td>${per}</tr>
+        <tr class="meta"><td class="stopname">Cadenza</td>${cad}</tr>
+      </thead>
+      <tbody>${body}</tbody>
+    </table></div>`;
+}
+function drawMap(){
+  const r=DATA.routes.find(x=>x.lineId===curLine.id&&x.direction===curDir);
+  const pts=r.stopIds.map(id=>stopById[id]).filter(s=>s.lat!=null&&s.lng!=null);
+  const mapEl=$('#map'),msg=$('#mapmsg');
+  if(mapObj){mapObj.remove();mapObj=null;}
+  if(!pts.length){
+    msg.style.display='grid';
+    msg.innerHTML=`<div><b>Mappa in attesa di coordinate</b><br>Aggiungi lat/lng alle fermate di questa linea e il percorso comparir\u00E0 qui.</div>`;
+    mapEl.style.display='none';return;
+  }
+  msg.style.display='none';mapEl.style.display='';
+  mapObj=L.map('map',{scrollWheelZoom:false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(mapObj);
+  const latlngs=pts.map(s=>[s.lat,s.lng]);
+  L.polyline(latlngs,{color:curLine.color,weight:4,opacity:.85}).addTo(mapObj);
+  pts.forEach((s,i)=>{
+    L.circleMarker([s.lat,s.lng],{radius:i===0||i===pts.length-1?7:5,
+      color:curLine.color,fillColor:'#fff',fillOpacity:1,weight:3})
+      .addTo(mapObj).bindPopup(`<b>${s.name}</b>${s.request?'<br><i>a richiesta</i>':''}`);
+  });
+  mapObj.fitBounds(latlngs,{padding:[24,24]});
+}
+
+/* ---------- tabs ---------- */
+function wireTabs(){
+  document.querySelectorAll('nav.tabs button').forEach(b=>b.onclick=()=>{
+    document.querySelectorAll('nav.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
+    document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===b.dataset.tab));
+    if(b.dataset.tab==='lines')showLineList();
+  });
+}
+
+/* ================= boot ================= */
+async function boot(){
+  try{
+    const res=await fetch('data.json',{cache:'no-store'});
+    if(!res.ok)throw new Error(res.status);
+    DATA=await res.json();
+  }catch(e){
+    document.querySelector('main').innerHTML=
+      `<div class="card empty"><b>Impossibile caricare data.json.</b><br>
+       Se apri il file dal disco (file://), il browser blocca fetch: pubblica su GitHub Pages
+       o avvia un server locale (<code>python3 -m http.server</code>). Dettaglio: ${e.message}</div>`;
+    return;
+  }
+  DATA.stops.forEach(s=>stopById[s.id]=s);
+  DATA.routes.forEach(r=>routeById[r.id]=r);
+  DATA.lines.forEach(l=>lineById[l.id]=l);
+  DATA.trips.forEach(t=>(tripsByRoute[t.routeId]=tripsByRoute[t.routeId]||[]).push(t));
+  stopsSorted=[...DATA.stops].sort((a,b)=>a.name.localeCompare(b.name,'it'));
+
+  fillStops($('#orig'));fillStops($('#dest'));
+  $('#dest').selectedIndex=Math.min(1,stopsSorted.length-1);
+  const n=new Date();
+  $('#date').value=n.toISOString().slice(0,10);
+  $('#time').value=String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0');
+  $('#swap').onclick=()=>{const a=$('#orig').value,b=$('#dest').value;$('#orig').value=b;$('#dest').value=a;doSearch();};
+  $('#go').onclick=doSearch;
+  ['#orig','#dest','#date','#time'].forEach(s=>$(s).addEventListener('change',doSearch));
+  wireTabs();
+  doSearch();
+}
+boot();
+
+</script>
+</body>
+</html>

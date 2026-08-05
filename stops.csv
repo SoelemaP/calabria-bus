@@ -1,0 +1,35 @@
+stop_id;name;comune;zona;richiesta;geocode_query;lat;lng;fonte;geocode_match;verificato
+s_cosenza_via_g_marconi_citta_duemila;COSENZA (Via G. Marconi - Citta Duemila);Cosenza;Via G. Marconi;;Via G. Marconi, Citta Duemila, Cosenza, Italia;;;;;no
+s_rende_roges_villini;RENDE (Roges-Villini);Rende;Roges;;Roges, Villini, Rende, Italia;;;;;no
+s_rende_roges_via_genova_7_a_rich;RENDE (Roges-Via Genova,7-a rich.);Rende;Roges;R;Roges, Via Genova, 7, Rende, Italia;;;;;no
+s_rende_roges_viale_kennedy_n_c_114;RENDE (Roges-Viale Kennedy n.c.114);Rende;Roges;;Roges, Viale Kennedy 114, Rende, Italia;;;;;no
+s_rende_commenda_via_della_resistenza_n_c_;RENDE (Commenda-Via della Resistenza n.c.32);Rende;Commenda;;Commenda, Via della Resistenza 32, Rende, Italia;;;;;no
+s_rende_commenda_via_d_resistenza_96_a_ric;RENDE (Commenda-Via d.Resistenza,96-a rich.);Rende;Commenda;R;Commenda, Via d.Resistenza, 96, Rende, Italia;;;;;no
+s_rende_commenda_via_della_resistenza_132;RENDE (Commenda-Via della Resistenza,132);Rende;Commenda;;Commenda, Via della Resistenza, 132, Rende, Italia;;;;;no
+s_rende_commenda_via_g_verdi_110_a_rich;RENDE (Commenda-Via G.Verdi,110-a rich.);Rende;Commenda;R;Commenda, Via G.Verdi, 110, Rende, Italia;;;;;no
+s_rende_commenda_via_g_verdi_170_a_rich;RENDE (Commenda-Via G.Verdi,170-a rich.);Rende;Commenda;R;Commenda, Via G.Verdi, 170, Rende, Italia;;;;;no
+s_rende_commenda_via_g_verdi_n_c_220;RENDE (Commenda-Via G.Verdi n.c.220);Rende;Commenda;;Commenda, Via G.Verdi 220, Rende, Italia;;;;;no
+s_rende_quattromiglia_via_verdi_248_a_rich;RENDE (Quattromiglia- Via Verdi,248 -a rich.);Rende;Quattromiglia;R;Quattromiglia, Via Verdi, 248, Rende, Italia;;;;;no
+s_rende_quattromiglia_via_a_volta_n_c_66;RENDE (Quattromiglia-Via A.Volta n.c.66);Rende;Quattromiglia;;Quattromiglia, Via A.Volta 66, Rende, Italia;;;;;no
+s_rende_quattromiglia_via_volta_staz_ferro;RENDE (Quattromiglia-Via Volta-Staz.Ferrov.);Rende;Quattromiglia;;Quattromiglia, Via Volta, Staz.Ferrov., Rende, Italia;;;;;no
+s_rende_quattromiglia_via_l_davinci_poliam;RENDE (Quattromiglia-Via L.DaVinci-Poliambul.);Rende;Quattromiglia;;Quattromiglia, Via L.DaVinci, Poliambul., Rende, Italia;;;;;no
+s_rende_quattromiglia_villa_giorcelli;RENDE (Quattromiglia-Villa Giorcelli);Rende;Quattromiglia;;Quattromiglia, Villa Giorcelli, Rende, Italia;;;;;no
+s_rende_quattromiglia_via_marconi_staz_ser;RENDE (Quattromiglia-Via Marconi-Staz.Serv.ERG);Rende;Quattromiglia;;Quattromiglia, Via Marconi, Staz.Serv.ERG, Rende, Italia;;;;;no
+s_rende_unical_via_a_savinio_pensiline;RENDE (Unical-Via A.Savinio - Pensiline);Rende;Unical;;Unical, Via A.Savinio, Pensiline, Rende, Italia;;;;;no
+s_rende_unical_terminal_bus;RENDE (Unical-TERMINAL BUS);Rende;Unical;;Unical, TERMINAL BUS, Rende, Italia;;;;;no
+s_rende_unical_c_u_s_a_rich;RENDE (Unical-C.U.S. - a rich.);Rende;Unical;R;Unical, C.U.S., Rende, Italia;;;;;no
+s_rende_unical_via_padre_leon_dehon_a_rich;RENDE (Unical-Via Padre Leon Dehon - a rich.);Rende;Unical;R;Unical, Via Padre Leon Dehon, Rende, Italia;;;;;no
+s_rende_quattromiglia_via_marconi_n_c_81;RENDE (Quattromiglia-Via Marconi n.c.81);Rende;Quattromiglia;;Quattromiglia, Via Marconi 81, Rende, Italia;;;;;no
+s_rende_quattromiglia_via_l_da_vinci_42;RENDE (Quattromiglia-Via L. Da Vinci,42);Rende;Quattromiglia;;Quattromiglia, Via L. Da Vinci, 42, Rende, Italia;;;;;no
+s_rende_quattromiglia_via_rossini_47_a_ric;RENDE (Quattromiglia-Via Rossini,47-a rich.);Rende;Quattromiglia;R;Quattromiglia, Via Rossini, 47, Rende, Italia;;;;;no
+s_rende_quattromiglia_via_rossini_60_a_ric;RENDE (Quattromiglia-Via Rossini,60 -a rich);Rende;Quattromiglia;R;Quattromiglia, Via Rossini, 60, Rende, Italia;;;;;no
+s_rende_quattromiglia_via_rossini_n_c_194;RENDE (Quattromiglia-Via Rossini n.c.194);Rende;Quattromiglia;;Quattromiglia, Via Rossini 194, Rende, Italia;;;;;no
+s_rende_commenda_via_don_minzoni_campi_ten;RENDE (Commenda-Via Don Minzoni-Campi Tennis);Rende;Commenda;;Commenda, Via Don Minzoni, Campi Tennis, Rende, Italia;;;;;no
+s_rende_commenda_via_don_minzoni_2_a_rich;RENDE (Commenda-Via Don Minzoni,2-a rich.);Rende;Commenda;R;Commenda, Via Don Minzoni, 2, Rende, Italia;;;;;no
+s_rende_commenda_via_c_menotti;RENDE (Commenda-Via C. Menotti);Rende;Commenda;;Commenda, Via C. Menotti, Rende, Italia;;;;;no
+s_rende_commenda_via_don_minzoni_78;RENDE (Commenda-Via Don Minzoni,78);Rende;Commenda;;Commenda, Via Don Minzoni, 78, Rende, Italia;;;;;no
+s_rende_roges_via_n_lenin_1c_a_rich;RENDE (Roges-Via N. Lenin,1C-a rich.);Rende;Roges;R;Roges, Via N. Lenin, 1C, Rende, Italia;;;;;no
+s_rende_roges_metropolis;RENDE (Roges-METROPOLIS);Rende;Roges;;Roges, METROPOLIS, Rende, Italia;;;;;no
+s_cosenza_via_panebianco_chiesa_s_aniello;COSENZA (Via Panebianco-Chiesa S.Aniello);Cosenza;Via Panebianco;;Via Panebianco, Chiesa S.Aniello, Cosenza, Italia;;;;;no
+s_cosenza_via_panebianco_banco_di_napoli;COSENZA (Via Panebianco-Banco di Napoli);Cosenza;Via Panebianco;;Via Panebianco, Banco di Napoli, Cosenza, Italia;;;;;no
+s_cosenza_via_panebianco_staz_serv_esso;COSENZA (Via Panebianco-Staz.Serv.ESSO);Cosenza;Via Panebianco;;Via Panebianco, Staz.Serv.ESSO, Cosenza, Italia;;;;;no

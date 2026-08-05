@@ -1,0 +1,1060 @@
+{
+ "lines": [
+  {
+   "id": "l_136",
+   "number": "136",
+   "name": "Cosenza – Rende (Roges·Commenda·Quattromiglia·UNICAL·Arcavacata·Rocchi)",
+   "color": "#2563EB"
+  }
+ ],
+ "stops": [
+  {
+   "id": "s_cosenza_via_g_marconi_citta_duemila",
+   "name": "COSENZA (Via G. Marconi - Citta Duemila)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_roges_villini",
+   "name": "RENDE (Roges-Villini)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_roges_via_genova_7_a_rich",
+   "name": "RENDE (Roges-Via Genova,7-a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_roges_viale_kennedy_n_c_114",
+   "name": "RENDE (Roges-Viale Kennedy n.c.114)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_della_resistenza_n_c_",
+   "name": "RENDE (Commenda-Via della Resistenza n.c.32)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_d_resistenza_96_a_ric",
+   "name": "RENDE (Commenda-Via d.Resistenza,96-a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_della_resistenza_132",
+   "name": "RENDE (Commenda-Via della Resistenza,132)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_g_verdi_110_a_rich",
+   "name": "RENDE (Commenda-Via G.Verdi,110-a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_g_verdi_170_a_rich",
+   "name": "RENDE (Commenda-Via G.Verdi,170-a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_g_verdi_n_c_220",
+   "name": "RENDE (Commenda-Via G.Verdi n.c.220)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_verdi_248_a_rich",
+   "name": "RENDE (Quattromiglia- Via Verdi,248 -a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_a_volta_n_c_66",
+   "name": "RENDE (Quattromiglia-Via A.Volta n.c.66)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_volta_staz_ferro",
+   "name": "RENDE (Quattromiglia-Via Volta-Staz.Ferrov.)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_l_davinci_poliam",
+   "name": "RENDE (Quattromiglia-Via L.DaVinci-Poliambul.)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_villa_giorcelli",
+   "name": "RENDE (Quattromiglia-Villa Giorcelli)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_marconi_staz_ser",
+   "name": "RENDE (Quattromiglia-Via Marconi-Staz.Serv.ERG)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_unical_via_a_savinio_pensiline",
+   "name": "RENDE (Unical-Via A.Savinio - Pensiline)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_unical_terminal_bus",
+   "name": "RENDE (Unical-TERMINAL BUS)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_unical_c_u_s_a_rich",
+   "name": "RENDE (Unical-C.U.S. - a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_unical_via_padre_leon_dehon_a_rich",
+   "name": "RENDE (Unical-Via Padre Leon Dehon - a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_marconi_n_c_81",
+   "name": "RENDE (Quattromiglia-Via Marconi n.c.81)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_l_da_vinci_42",
+   "name": "RENDE (Quattromiglia-Via L. Da Vinci,42)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_rossini_47_a_ric",
+   "name": "RENDE (Quattromiglia-Via Rossini,47-a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_rossini_60_a_ric",
+   "name": "RENDE (Quattromiglia-Via Rossini,60 -a rich)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_quattromiglia_via_rossini_n_c_194",
+   "name": "RENDE (Quattromiglia-Via Rossini n.c.194)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_don_minzoni_campi_ten",
+   "name": "RENDE (Commenda-Via Don Minzoni-Campi Tennis)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_don_minzoni_2_a_rich",
+   "name": "RENDE (Commenda-Via Don Minzoni,2-a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_c_menotti",
+   "name": "RENDE (Commenda-Via C. Menotti)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_commenda_via_don_minzoni_78",
+   "name": "RENDE (Commenda-Via Don Minzoni,78)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_roges_via_n_lenin_1c_a_rich",
+   "name": "RENDE (Roges-Via N. Lenin,1C-a rich.)",
+   "request": true,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_rende_roges_metropolis",
+   "name": "RENDE (Roges-METROPOLIS)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_cosenza_via_panebianco_chiesa_s_aniello",
+   "name": "COSENZA (Via Panebianco-Chiesa S.Aniello)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_cosenza_via_panebianco_banco_di_napoli",
+   "name": "COSENZA (Via Panebianco-Banco di Napoli)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  },
+  {
+   "id": "s_cosenza_via_panebianco_staz_serv_esso",
+   "name": "COSENZA (Via Panebianco-Staz.Serv.ESSO)",
+   "request": false,
+   "lat": null,
+   "lng": null
+  }
+ ],
+ "routes": [
+  {
+   "id": "r_136_andata",
+   "lineId": "l_136",
+   "direction": "andata",
+   "stopIds": [
+    "s_cosenza_via_g_marconi_citta_duemila",
+    "s_rende_roges_villini",
+    "s_rende_roges_via_genova_7_a_rich",
+    "s_rende_roges_viale_kennedy_n_c_114",
+    "s_rende_commenda_via_della_resistenza_n_c_",
+    "s_rende_commenda_via_d_resistenza_96_a_ric",
+    "s_rende_commenda_via_della_resistenza_132",
+    "s_rende_commenda_via_g_verdi_110_a_rich",
+    "s_rende_commenda_via_g_verdi_170_a_rich",
+    "s_rende_commenda_via_g_verdi_n_c_220",
+    "s_rende_quattromiglia_via_verdi_248_a_rich",
+    "s_rende_quattromiglia_via_a_volta_n_c_66",
+    "s_rende_quattromiglia_via_volta_staz_ferro",
+    "s_rende_quattromiglia_via_l_davinci_poliam",
+    "s_rende_quattromiglia_villa_giorcelli",
+    "s_rende_quattromiglia_via_marconi_staz_ser",
+    "s_rende_unical_via_a_savinio_pensiline",
+    "s_rende_unical_terminal_bus"
+   ]
+  },
+  {
+   "id": "r_136_ritorno",
+   "lineId": "l_136",
+   "direction": "ritorno",
+   "stopIds": [
+    "s_rende_unical_terminal_bus",
+    "s_rende_unical_c_u_s_a_rich",
+    "s_rende_unical_via_padre_leon_dehon_a_rich",
+    "s_rende_quattromiglia_via_marconi_n_c_81",
+    "s_rende_quattromiglia_via_l_da_vinci_42",
+    "s_rende_quattromiglia_via_rossini_47_a_ric",
+    "s_rende_quattromiglia_via_rossini_60_a_ric",
+    "s_rende_quattromiglia_via_rossini_n_c_194",
+    "s_rende_commenda_via_don_minzoni_campi_ten",
+    "s_rende_commenda_via_don_minzoni_2_a_rich",
+    "s_rende_commenda_via_c_menotti",
+    "s_rende_commenda_via_don_minzoni_78",
+    "s_rende_roges_via_n_lenin_1c_a_rich",
+    "s_rende_roges_metropolis",
+    "s_cosenza_via_panebianco_chiesa_s_aniello",
+    "s_cosenza_via_panebianco_banco_di_napoli",
+    "s_cosenza_via_panebianco_staz_serv_esso",
+    "s_cosenza_via_g_marconi_citta_duemila"
+   ]
+  }
+ ],
+ "trips": [
+  {
+   "id": "t_402425",
+   "routeId": "r_136_andata",
+   "corsaNo": "402425",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "07:55",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "07:55",
+    "s_rende_roges_villini": "08:02",
+    "s_rende_roges_via_genova_7_a_rich": "08:04",
+    "s_rende_roges_viale_kennedy_n_c_114": "08:05",
+    "s_rende_commenda_via_della_resistenza_n_c_": "08:06",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "08:06",
+    "s_rende_commenda_via_della_resistenza_132": "08:07",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "08:08",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "08:09",
+    "s_rende_commenda_via_g_verdi_n_c_220": "08:10",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "08:10",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "08:11",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "08:12",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "08:13",
+    "s_rende_quattromiglia_villa_giorcelli": "08:14",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "08:15",
+    "s_rende_unical_via_a_savinio_pensiline": "08:19",
+    "s_rende_unical_terminal_bus": "08:20"
+   }
+  },
+  {
+   "id": "t_402427",
+   "routeId": "r_136_andata",
+   "corsaNo": "402427",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "09:00",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "09:00",
+    "s_rende_roges_villini": "09:07",
+    "s_rende_roges_via_genova_7_a_rich": "09:09",
+    "s_rende_roges_viale_kennedy_n_c_114": "09:10",
+    "s_rende_commenda_via_della_resistenza_n_c_": "09:11",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "09:11",
+    "s_rende_commenda_via_della_resistenza_132": "09:12",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "09:13",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "09:14",
+    "s_rende_commenda_via_g_verdi_n_c_220": "09:15",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "09:15",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "09:16",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "09:17",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "09:18",
+    "s_rende_quattromiglia_villa_giorcelli": "09:19",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "09:20",
+    "s_rende_unical_via_a_savinio_pensiline": "09:24",
+    "s_rende_unical_terminal_bus": "09:25"
+   }
+  },
+  {
+   "id": "t_402428",
+   "routeId": "r_136_andata",
+   "corsaNo": "402428",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "10:00",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "10:00",
+    "s_rende_roges_villini": "10:07",
+    "s_rende_roges_via_genova_7_a_rich": "10:09",
+    "s_rende_roges_viale_kennedy_n_c_114": "10:10",
+    "s_rende_commenda_via_della_resistenza_n_c_": "10:11",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "10:11",
+    "s_rende_commenda_via_della_resistenza_132": "10:12",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "10:13",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "10:14",
+    "s_rende_commenda_via_g_verdi_n_c_220": "10:15",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "10:15",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "10:16",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "10:17",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "10:18",
+    "s_rende_quattromiglia_villa_giorcelli": "10:19",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "10:20",
+    "s_rende_unical_via_a_savinio_pensiline": "10:24",
+    "s_rende_unical_terminal_bus": "10:25"
+   }
+  },
+  {
+   "id": "t_402429",
+   "routeId": "r_136_andata",
+   "corsaNo": "402429",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "11:05",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "11:05",
+    "s_rende_roges_villini": "11:12",
+    "s_rende_roges_via_genova_7_a_rich": "11:14",
+    "s_rende_roges_viale_kennedy_n_c_114": "11:15",
+    "s_rende_commenda_via_della_resistenza_n_c_": "11:16",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "11:16",
+    "s_rende_commenda_via_della_resistenza_132": "11:17",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "11:18",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "11:19",
+    "s_rende_commenda_via_g_verdi_n_c_220": "11:20",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "11:20",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "11:21",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "11:22",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "11:23",
+    "s_rende_quattromiglia_villa_giorcelli": "11:24",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "11:25",
+    "s_rende_unical_via_a_savinio_pensiline": "11:29",
+    "s_rende_unical_terminal_bus": "11:30"
+   }
+  },
+  {
+   "id": "t_402431",
+   "routeId": "r_136_andata",
+   "corsaNo": "402431",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "12:00",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "12:00",
+    "s_rende_roges_villini": "12:07",
+    "s_rende_roges_via_genova_7_a_rich": "12:09",
+    "s_rende_roges_viale_kennedy_n_c_114": "12:10",
+    "s_rende_commenda_via_della_resistenza_n_c_": "12:11",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "12:11",
+    "s_rende_commenda_via_della_resistenza_132": "12:12",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "12:13",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "12:14",
+    "s_rende_commenda_via_g_verdi_n_c_220": "12:15",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "12:15",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "12:16",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "12:17",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "12:18",
+    "s_rende_quattromiglia_villa_giorcelli": "12:19",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "12:20",
+    "s_rende_unical_via_a_savinio_pensiline": "12:24",
+    "s_rende_unical_terminal_bus": "12:25"
+   }
+  },
+  {
+   "id": "t_403830",
+   "routeId": "r_136_andata",
+   "corsaNo": "403830",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "12:40",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "12:40",
+    "s_rende_roges_villini": "12:47",
+    "s_rende_roges_via_genova_7_a_rich": "12:49",
+    "s_rende_roges_viale_kennedy_n_c_114": "12:50",
+    "s_rende_commenda_via_della_resistenza_n_c_": "12:51",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "12:51",
+    "s_rende_commenda_via_della_resistenza_132": "12:52",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "12:53",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "12:54",
+    "s_rende_commenda_via_g_verdi_n_c_220": "12:55",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "12:55",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "12:56",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "12:57",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "12:58",
+    "s_rende_quattromiglia_villa_giorcelli": "12:59",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "13:00",
+    "s_rende_unical_via_a_savinio_pensiline": "13:04",
+    "s_rende_unical_terminal_bus": "13:05"
+   }
+  },
+  {
+   "id": "t_402433",
+   "routeId": "r_136_andata",
+   "corsaNo": "402433",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "13:00",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "13:00",
+    "s_rende_roges_villini": "13:07",
+    "s_rende_roges_via_genova_7_a_rich": "13:09",
+    "s_rende_roges_viale_kennedy_n_c_114": "13:10",
+    "s_rende_commenda_via_della_resistenza_n_c_": "13:11",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "13:11",
+    "s_rende_commenda_via_della_resistenza_132": "13:12",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "13:13",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "13:14",
+    "s_rende_commenda_via_g_verdi_n_c_220": "13:15",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "13:15",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "13:16",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "13:17",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "13:18",
+    "s_rende_quattromiglia_villa_giorcelli": "13:19",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "13:20",
+    "s_rende_unical_via_a_savinio_pensiline": "13:24",
+    "s_rende_unical_terminal_bus": "13:25"
+   }
+  },
+  {
+   "id": "t_402434",
+   "routeId": "r_136_andata",
+   "corsaNo": "402434",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "14:00",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "14:00",
+    "s_rende_roges_villini": "14:07",
+    "s_rende_roges_via_genova_7_a_rich": "14:09",
+    "s_rende_roges_viale_kennedy_n_c_114": "14:10",
+    "s_rende_commenda_via_della_resistenza_n_c_": "14:11",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "14:11",
+    "s_rende_commenda_via_della_resistenza_132": "14:12",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "14:13",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "14:14",
+    "s_rende_commenda_via_g_verdi_n_c_220": "14:15",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "14:15",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "14:16",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "14:17",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "14:18",
+    "s_rende_quattromiglia_villa_giorcelli": "14:19",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "14:20",
+    "s_rende_unical_via_a_savinio_pensiline": "14:24",
+    "s_rende_unical_terminal_bus": "14:25"
+   }
+  },
+  {
+   "id": "t_402435",
+   "routeId": "r_136_andata",
+   "corsaNo": "402435",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "15:00",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "15:00",
+    "s_rende_roges_villini": "15:07",
+    "s_rende_roges_via_genova_7_a_rich": "15:09",
+    "s_rende_roges_viale_kennedy_n_c_114": "15:10",
+    "s_rende_commenda_via_della_resistenza_n_c_": "15:11",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "15:11",
+    "s_rende_commenda_via_della_resistenza_132": "15:12",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "15:13",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "15:14",
+    "s_rende_commenda_via_g_verdi_n_c_220": "15:15",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "15:15",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "15:16",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "15:17",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "15:18",
+    "s_rende_quattromiglia_villa_giorcelli": "15:19",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "15:20",
+    "s_rende_unical_via_a_savinio_pensiline": "15:24",
+    "s_rende_unical_terminal_bus": "15:25"
+   }
+  },
+  {
+   "id": "t_402436",
+   "routeId": "r_136_andata",
+   "corsaNo": "402436",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "16:00",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "16:00",
+    "s_rende_roges_villini": "16:07",
+    "s_rende_roges_via_genova_7_a_rich": "16:09",
+    "s_rende_roges_viale_kennedy_n_c_114": "16:10",
+    "s_rende_commenda_via_della_resistenza_n_c_": "16:11",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "16:11",
+    "s_rende_commenda_via_della_resistenza_132": "16:12",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "16:13",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "16:14",
+    "s_rende_commenda_via_g_verdi_n_c_220": "16:15",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "16:15",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "16:16",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "16:17",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "16:18",
+    "s_rende_quattromiglia_villa_giorcelli": "16:19",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "16:20",
+    "s_rende_unical_via_a_savinio_pensiline": "16:24",
+    "s_rende_unical_terminal_bus": "16:25"
+   }
+  },
+  {
+   "id": "t_402437",
+   "routeId": "r_136_andata",
+   "corsaNo": "402437",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "17:00",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "17:00",
+    "s_rende_roges_villini": "17:07",
+    "s_rende_roges_via_genova_7_a_rich": "17:09",
+    "s_rende_roges_viale_kennedy_n_c_114": "17:10",
+    "s_rende_commenda_via_della_resistenza_n_c_": "17:11",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "17:11",
+    "s_rende_commenda_via_della_resistenza_132": "17:12",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "17:13",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "17:14",
+    "s_rende_commenda_via_g_verdi_n_c_220": "17:15",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "17:15",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "17:16",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "17:17",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "17:18",
+    "s_rende_quattromiglia_villa_giorcelli": "17:19",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "17:20",
+    "s_rende_unical_via_a_savinio_pensiline": "17:24",
+    "s_rende_unical_terminal_bus": "17:25"
+   }
+  },
+  {
+   "id": "t_402438",
+   "routeId": "r_136_andata",
+   "corsaNo": "402438",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "18:05",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "18:05",
+    "s_rende_roges_villini": "18:12",
+    "s_rende_roges_via_genova_7_a_rich": "18:14",
+    "s_rende_roges_viale_kennedy_n_c_114": "18:15",
+    "s_rende_commenda_via_della_resistenza_n_c_": "18:16",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "18:16",
+    "s_rende_commenda_via_della_resistenza_132": "18:17",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "18:18",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "18:19",
+    "s_rende_commenda_via_g_verdi_n_c_220": "18:20",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "18:20",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "18:21",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "18:22",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "18:23",
+    "s_rende_quattromiglia_villa_giorcelli": "18:24",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "18:25",
+    "s_rende_unical_via_a_savinio_pensiline": "18:29",
+    "s_rende_unical_terminal_bus": "18:30"
+   }
+  },
+  {
+   "id": "t_402439",
+   "routeId": "r_136_andata",
+   "corsaNo": "402439",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "19:05",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "19:05",
+    "s_rende_roges_villini": "19:12",
+    "s_rende_roges_via_genova_7_a_rich": "19:14",
+    "s_rende_roges_viale_kennedy_n_c_114": "19:15",
+    "s_rende_commenda_via_della_resistenza_n_c_": "19:16",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "19:16",
+    "s_rende_commenda_via_della_resistenza_132": "19:17",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "19:18",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "19:19",
+    "s_rende_commenda_via_g_verdi_n_c_220": "19:20",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "19:20",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "19:21",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "19:22",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "19:23",
+    "s_rende_quattromiglia_villa_giorcelli": "19:24",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "19:25",
+    "s_rende_unical_via_a_savinio_pensiline": "19:29",
+    "s_rende_unical_terminal_bus": "19:30"
+   }
+  },
+  {
+   "id": "t_402440",
+   "routeId": "r_136_andata",
+   "corsaNo": "402440",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "20:05",
+   "times": {
+    "s_cosenza_via_g_marconi_citta_duemila": "20:05",
+    "s_rende_roges_villini": "20:12",
+    "s_rende_roges_via_genova_7_a_rich": "20:14",
+    "s_rende_roges_viale_kennedy_n_c_114": "20:15",
+    "s_rende_commenda_via_della_resistenza_n_c_": "20:16",
+    "s_rende_commenda_via_d_resistenza_96_a_ric": "20:16",
+    "s_rende_commenda_via_della_resistenza_132": "20:17",
+    "s_rende_commenda_via_g_verdi_110_a_rich": "20:18",
+    "s_rende_commenda_via_g_verdi_170_a_rich": "20:19",
+    "s_rende_commenda_via_g_verdi_n_c_220": "20:20",
+    "s_rende_quattromiglia_via_verdi_248_a_rich": "20:20",
+    "s_rende_quattromiglia_via_a_volta_n_c_66": "20:21",
+    "s_rende_quattromiglia_via_volta_staz_ferro": "20:22",
+    "s_rende_quattromiglia_via_l_davinci_poliam": "20:23",
+    "s_rende_quattromiglia_villa_giorcelli": "20:24",
+    "s_rende_quattromiglia_via_marconi_staz_ser": "20:25",
+    "s_rende_unical_via_a_savinio_pensiline": "20:29",
+    "s_rende_unical_terminal_bus": "20:30"
+   }
+  },
+  {
+   "id": "t_402441",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402441",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "08:30",
+   "times": {
+    "s_rende_unical_terminal_bus": "08:30",
+    "s_rende_unical_c_u_s_a_rich": "08:31",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "08:33",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "08:38",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "08:39",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "08:41",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "08:42",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "08:44",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "08:45",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "08:46",
+    "s_rende_commenda_via_don_minzoni_78": "08:47",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "08:48",
+    "s_rende_roges_metropolis": "08:49",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "08:55",
+    "s_cosenza_via_panebianco_banco_di_napoli": "08:57",
+    "s_cosenza_via_panebianco_staz_serv_esso": "08:58",
+    "s_cosenza_via_g_marconi_citta_duemila": "09:00"
+   }
+  },
+  {
+   "id": "t_402442",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402442",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "09:30",
+   "times": {
+    "s_rende_unical_terminal_bus": "09:30",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "09:33",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "09:38",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "09:39",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "09:41",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "09:42",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "09:44",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "09:46",
+    "s_rende_commenda_via_don_minzoni_78": "09:47",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "09:48",
+    "s_rende_roges_metropolis": "09:49",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "09:55",
+    "s_cosenza_via_panebianco_banco_di_napoli": "09:57",
+    "s_cosenza_via_panebianco_staz_serv_esso": "09:58",
+    "s_cosenza_via_g_marconi_citta_duemila": "10:00"
+   }
+  },
+  {
+   "id": "t_402443",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402443",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "10:35",
+   "times": {
+    "s_rende_unical_terminal_bus": "10:35",
+    "s_rende_unical_c_u_s_a_rich": "10:36",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "10:38",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "10:43",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "10:44",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "10:46",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "10:47",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "10:49",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "10:50",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "10:51",
+    "s_rende_commenda_via_don_minzoni_78": "10:52",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "10:53",
+    "s_rende_roges_metropolis": "10:54",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "11:00",
+    "s_cosenza_via_panebianco_banco_di_napoli": "11:02",
+    "s_cosenza_via_panebianco_staz_serv_esso": "11:03",
+    "s_cosenza_via_g_marconi_citta_duemila": "11:05"
+   }
+  },
+  {
+   "id": "t_402444",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402444",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "11:30",
+   "times": {
+    "s_rende_unical_terminal_bus": "11:30",
+    "s_rende_unical_c_u_s_a_rich": "11:31",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "11:33",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "11:38",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "11:39",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "11:41",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "11:42",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "11:44",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "11:45",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "11:46",
+    "s_rende_commenda_via_don_minzoni_78": "11:47",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "11:48",
+    "s_rende_roges_metropolis": "11:49",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "11:55",
+    "s_cosenza_via_panebianco_banco_di_napoli": "11:57",
+    "s_cosenza_via_panebianco_staz_serv_esso": "11:58",
+    "s_cosenza_via_g_marconi_citta_duemila": "12:00"
+   }
+  },
+  {
+   "id": "t_402446",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402446",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "12:30",
+   "times": {
+    "s_rende_unical_terminal_bus": "12:30",
+    "s_rende_unical_c_u_s_a_rich": "12:31",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "12:33",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "12:38",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "12:39",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "12:41",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "12:42",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "12:44",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "12:45",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "12:46",
+    "s_rende_commenda_via_don_minzoni_78": "12:47",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "12:48",
+    "s_rende_roges_metropolis": "12:49",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "12:55",
+    "s_cosenza_via_panebianco_banco_di_napoli": "12:57",
+    "s_cosenza_via_panebianco_staz_serv_esso": "12:58",
+    "s_cosenza_via_g_marconi_citta_duemila": "13:00"
+   }
+  },
+  {
+   "id": "t_403831",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "403831",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "13:05",
+   "times": {
+    "s_rende_unical_terminal_bus": "13:05",
+    "s_rende_unical_c_u_s_a_rich": "13:06",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "13:08",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "13:13",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "13:14",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "13:16",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "13:17",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "13:19",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "13:20",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "13:21",
+    "s_rende_commenda_via_don_minzoni_78": "13:22",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "13:23",
+    "s_rende_roges_metropolis": "13:24",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "13:30",
+    "s_cosenza_via_panebianco_banco_di_napoli": "13:32",
+    "s_cosenza_via_panebianco_staz_serv_esso": "13:33",
+    "s_cosenza_via_g_marconi_citta_duemila": "13:35"
+   }
+  },
+  {
+   "id": "t_402455",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402455",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "13:30",
+   "times": {
+    "s_rende_unical_terminal_bus": "13:30",
+    "s_rende_unical_c_u_s_a_rich": "13:31",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "13:33",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "13:38",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "13:39",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "13:41",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "13:42",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "13:44",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "13:45",
+    "s_rende_commenda_via_c_menotti": "13:46",
+    "s_rende_roges_metropolis": "13:49",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "13:55",
+    "s_cosenza_via_panebianco_banco_di_napoli": "13:57",
+    "s_cosenza_via_panebianco_staz_serv_esso": "13:58",
+    "s_cosenza_via_g_marconi_citta_duemila": "14:00"
+   }
+  },
+  {
+   "id": "t_402448",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402448",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "14:30",
+   "times": {
+    "s_rende_unical_terminal_bus": "14:30",
+    "s_rende_unical_c_u_s_a_rich": "14:31",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "14:33",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "14:38",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "14:39",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "14:41",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "14:42",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "14:44",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "14:45",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "14:46",
+    "s_rende_commenda_via_don_minzoni_78": "14:47",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "14:48",
+    "s_rende_roges_metropolis": "14:49",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "14:55",
+    "s_cosenza_via_panebianco_banco_di_napoli": "14:57",
+    "s_cosenza_via_panebianco_staz_serv_esso": "14:58",
+    "s_cosenza_via_g_marconi_citta_duemila": "15:00"
+   }
+  },
+  {
+   "id": "t_402449",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402449",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "15:30",
+   "times": {
+    "s_rende_unical_terminal_bus": "15:30",
+    "s_rende_unical_c_u_s_a_rich": "15:31",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "15:39",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "15:41",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "15:42",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "15:44",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "15:45",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "15:46",
+    "s_rende_commenda_via_don_minzoni_78": "15:47",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "15:48",
+    "s_rende_roges_metropolis": "15:49",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "15:55",
+    "s_cosenza_via_panebianco_banco_di_napoli": "15:57",
+    "s_cosenza_via_panebianco_staz_serv_esso": "15:58"
+   }
+  },
+  {
+   "id": "t_402450",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402450",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "16:30",
+   "times": {
+    "s_rende_unical_terminal_bus": "16:30",
+    "s_rende_unical_c_u_s_a_rich": "16:31",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "16:33",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "16:38",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "16:39",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "16:41",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "16:42",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "16:44",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "16:45",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "16:46",
+    "s_rende_commenda_via_don_minzoni_78": "16:47",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "16:48",
+    "s_rende_roges_metropolis": "16:49",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "16:55",
+    "s_cosenza_via_panebianco_banco_di_napoli": "16:57",
+    "s_cosenza_via_panebianco_staz_serv_esso": "16:58",
+    "s_cosenza_via_g_marconi_citta_duemila": "17:00"
+   }
+  },
+  {
+   "id": "t_402451",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402451",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "17:35",
+   "times": {
+    "s_rende_unical_terminal_bus": "17:35",
+    "s_rende_unical_c_u_s_a_rich": "17:36",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "17:38",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "17:43",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "17:44",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "17:46",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "17:47",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "17:49",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "17:50",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "17:51",
+    "s_rende_commenda_via_don_minzoni_78": "17:52",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "17:53",
+    "s_rende_roges_metropolis": "17:54",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "18:00",
+    "s_cosenza_via_panebianco_banco_di_napoli": "18:02",
+    "s_cosenza_via_panebianco_staz_serv_esso": "18:03",
+    "s_cosenza_via_g_marconi_citta_duemila": "18:05"
+   }
+  },
+  {
+   "id": "t_402452",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402452",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "18:35",
+   "times": {
+    "s_rende_unical_terminal_bus": "18:35",
+    "s_rende_unical_c_u_s_a_rich": "18:36",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "18:38",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "18:43",
+    "s_rende_quattromiglia_via_l_da_vinci_42": "18:44",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "18:46",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "18:47",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "18:49",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "18:50",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "18:51",
+    "s_rende_commenda_via_don_minzoni_78": "18:52",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "18:53",
+    "s_rende_roges_metropolis": "18:54",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "19:00",
+    "s_cosenza_via_panebianco_banco_di_napoli": "19:02",
+    "s_cosenza_via_panebianco_staz_serv_esso": "19:03",
+    "s_cosenza_via_g_marconi_citta_duemila": "19:05"
+   }
+  },
+  {
+   "id": "t_402453",
+   "routeId": "r_136_ritorno",
+   "corsaNo": "402453",
+   "periodo": "Univ",
+   "cadenza": "LMmGVS_",
+   "departure": "19:36",
+   "times": {
+    "s_rende_unical_c_u_s_a_rich": "19:36",
+    "s_rende_unical_via_padre_leon_dehon_a_rich": "19:38",
+    "s_rende_quattromiglia_via_marconi_n_c_81": "19:43",
+    "s_rende_quattromiglia_via_rossini_47_a_ric": "19:46",
+    "s_rende_quattromiglia_via_rossini_60_a_ric": "19:47",
+    "s_rende_quattromiglia_via_rossini_n_c_194": "19:49",
+    "s_rende_commenda_via_don_minzoni_campi_ten": "19:50",
+    "s_rende_commenda_via_don_minzoni_2_a_rich": "19:51",
+    "s_rende_commenda_via_don_minzoni_78": "19:52",
+    "s_rende_roges_via_n_lenin_1c_a_rich": "19:53",
+    "s_rende_roges_metropolis": "19:54",
+    "s_cosenza_via_panebianco_chiesa_s_aniello": "20:00",
+    "s_cosenza_via_panebianco_banco_di_napoli": "20:02",
+    "s_cosenza_via_panebianco_staz_serv_esso": "20:03",
+    "s_cosenza_via_g_marconi_citta_duemila": "20:05"
+   }
+  }
+ ],
+ "calendar": {
+  "schoolTerm": [
+   [
+    915,
+    1231
+   ],
+   [
+    101,
+    610
+   ]
+  ],
+  "schoolBreaks": [
+   [
+    1223,
+    106
+   ],
+   [
+    601,
+    914
+   ]
+  ]
+ }
+}
